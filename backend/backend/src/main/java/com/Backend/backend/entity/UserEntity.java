@@ -1,6 +1,9 @@
 package com.Backend.backend.entity;
 
+import com.Backend.backend.dto.UserDto;
 import com.Backend.backend.enums.UserRole;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,8 +28,12 @@ public class UserEntity implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
     private String username;
+
     private String email;
+
+    @Column(nullable = false)
     private String password;
 
     @Enumerated(EnumType.STRING)
@@ -44,7 +51,7 @@ public class UserEntity implements UserDetails {
 
     @Override
     public String getUsername() {
-        return email;
+        return username;
     }
 
     @Override
@@ -65,5 +72,14 @@ public class UserEntity implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public UserDto toDto() {
+        UserDto userDto = new UserDto();
+        userDto.setId(this.id);
+        userDto.setEmail(this.email);
+        userDto.setName(this.username);
+        userDto.setUserRole(this.userRole);
+        return userDto;
     }
 }
