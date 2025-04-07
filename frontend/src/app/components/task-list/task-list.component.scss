@@ -1,0 +1,39 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/theming';
+.filter-container {
+    margin-bottom: 20px;
+  }
+  
+  .filter-container button {
+    margin-right: 10px;
+  }
+  
+  .active {
+    background-color: #e0e0e0;
+  }
+  
+  .task-table {
+    width: 100%;
+  }
+  
+  .status-to_do {
+    color: #ff9800;
+    font-weight: bold;
+  }
+  
+  .status-in_progress {
+    color: #2196f3;
+    font-weight: bold;
+  }
+  
+  .status-done {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .no-data {
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    color: #757575;
+  }
