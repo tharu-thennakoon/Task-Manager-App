@@ -1,4 +1,4 @@
-package com.Backend.backend.services;
+package com.Backend.backend.services.jwt;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -23,6 +23,5 @@ public class UserServiceImpl implements UserService {
                 return userRepository.findFirstByEmail(username).orElseThrow(() -> new UsernameNotFoundException("User not found"));
             }
         };
-        
     }
 }

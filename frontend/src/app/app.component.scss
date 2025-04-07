@@ -1,0 +1,44 @@
+/* Basic styling for the navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 16px;
+    background-color: #3f51b5; /* Material primary color */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  .spacer {
+    flex: 1 1 auto; /* This pushes the buttons to the right */
+  }
+  
+  .nav-link {
+    margin-left: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 599px) {
+    .navbar-brand {
+      font-size: 18px;
+    }
+    
+    .nav-link {
+      padding: 0 8px;
+    }
+  }

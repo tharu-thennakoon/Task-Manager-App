@@ -1,6 +1,5 @@
-package com.Backend.backend.services;
+package com.Backend.backend.services.jwt;
 
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 

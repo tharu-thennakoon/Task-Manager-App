@@ -1,5 +1,5 @@
 package com.Backend.backend.enums;
 
-public enum User {
+public enum UserRole {
     ADMIN, EMPLOYEE
 }
