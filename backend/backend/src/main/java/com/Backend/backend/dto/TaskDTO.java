@@ -1,30 +1,13 @@
-package com.Backend.backend.entity;
+package com.Backend.backend.dto;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
-@Entity
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class TaskDTO {
     private Long id;
-
-    @NotBlank(message = "Title is required")
     private String title;
-
     private String description;
     private String status;
     private LocalDateTime createdAt;
-
-    public Task() {
-        this.createdAt = LocalDateTime.now();
-        this.status = "TO_DO"; // Default status
-    }
 
     // Getters and Setters
     public Long getId() {
